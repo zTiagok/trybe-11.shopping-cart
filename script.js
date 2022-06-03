@@ -12,6 +12,7 @@ const createCustomElement = (element, className, innerText) => {
   return e;
 };
 
+// FUNÇÃO FINALIZADA!
 const createProductItemElement = ({ id: sku, title: name, thumbnail: image }) => {
   const section = document.createElement('section');
   const parent = document.querySelector('.items');
@@ -39,19 +40,14 @@ const createCartItemElement = ({ sku, name, salePrice }) => {
   return li;
 };
 
-// SUBSTITUIR A FUNÇÃO PELO FETCHPRODUTS_________________________________________;
-const retrieveItens = (product) => {
-  const productsUrl = `https://api.mercadolibre.com/sites/MLB/search?q=${product}`;
-
-  fetch(productsUrl)
-  .then((response) => response.json())
-  .then((data) => {
-    data.results.forEach((result) => {
-      createProductItemElement(result);
-    });
-  })
-  .catch((error) => error); 
+// FUNÇÃO FINALIZADA!
+const retrieveItens = async () => {
+  const response = fetchProducts('computador');
+  const data = await response;
+  
+  data.results.forEach((result) => {
+    createProductItemElement(result);
+  });
 };
-// ______________________________________________________________________________;
 
-window.onload = () => { retrieveItens('computador'); };
+window.onload = () => { retrieveItens(); };
