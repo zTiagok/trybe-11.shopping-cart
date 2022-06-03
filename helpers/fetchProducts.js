@@ -1,5 +1,5 @@
-const fetchProducts = (id) => {
-  const productsUrl = `https://api.mercadolibre.com/sites/MLB/search?q=${id}`;
+const fetchProducts = (product) => {
+  const productsUrl = `https://api.mercadolibre.com/sites/MLB/search?q=${product}`;
 
   return fetch(productsUrl)
   .then((response) => response.json())
