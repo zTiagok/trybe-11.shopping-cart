@@ -15,7 +15,7 @@ const createCustomElement = (element, className, innerText) => {
 
 // CRIAR FUNÇÃO!
 const cartItemClickListener = (event) => {
-  // coloque seu código aqui
+  event.target.remove();
 };
 
 // UTILIZAR A FUNÇÃO!
@@ -33,7 +33,6 @@ const createCartItemElement = ({ id: sku, title: name, price: salePrice }) => {
 const retrieveItem = async (id) => {
   const response = fetchItem(id);
   const data = await response;
-  console.log(data);
   
   createCartItemElement(data);
 };
