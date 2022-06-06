@@ -7,8 +7,6 @@ const fetchItem = (id) => {
   .catch((error) => error);
 };
 
-console.log(fetchItem('MLB1615760527'));
-
 if (typeof module !== 'undefined') {
   module.exports = {
     fetchItem,
