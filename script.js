@@ -3,7 +3,6 @@ const cartTotalPrice = document.querySelector('.total-price');
 const emptyCart = document.querySelector('.empty-cart');
 const itens = document.querySelector('.items');
 
-
 const emptyCartFunction = () => {
   while (cart.lastChild) {
     cart.lastChild.remove();
@@ -158,14 +157,6 @@ const emptyButton = document.querySelector('.empty-cart');
 const black = 'black-theme';
 const white = 'white-theme';
 
-const buttonChanger = () => {
-  if (themeBody[0].className === white) {
-    themeButton.innerHTML = 'Tema Escuro';
-  } else if (themeBody[0].className === black) {
-    themeButton.innerHTML = 'Tema Claro';
-  }
-};
-
 const blackTheme = () => {
   themeBody[0].className = black;
   emptyButton.style.color = 'white';
@@ -178,8 +169,10 @@ const whiteTheme = () => {
 
 const switchTheme = () => {
   if (themeBody[0].className === white) {
+    themeButton.innerHTML = 'Tema Claro';
     blackTheme();
   } else if (themeBody[0].className === black) {
+    themeButton.innerHTML = 'Tema Escuro';
     whiteTheme();
   }
 
@@ -189,4 +182,4 @@ const switchTheme = () => {
 emptyCart.addEventListener('click', emptyCartFunction);
 themeButton.addEventListener('click', switchTheme);
 
-window.onload = () => { retrieveProducts(); retrieveCart(); createLoading(); buttonChanger(); };
+window.onload = () => { retrieveProducts(); retrieveCart(); createLoading(); };

@@ -35,6 +35,25 @@ body {
   color: white;
   border: none;
   cursor: pointer;
+  position: relative;
+  top: 0px;
+
+  transition-property: top;
+  transition-delay: 0s;
+  transition-duration: .1s;
+}
+
+.theme-changer:hover {
+  position: relative;
+  top: -2px;
+  
+  transition-property: top;
+  transition-delay: 0s;
+  transition-duration: .1s;
+}
+
+.theme-changer:active {
+  color: rgb(26, 190, 26);
 }
 
 /*_____________________________________*/
@@ -174,6 +193,7 @@ body {
 
 .cart__item {
   font-weight: 300;
+  margin-top: 20px;
 }
 
 .empty-cart {
