@@ -47,6 +47,25 @@
   transition-duration: .1s;
 }
 
+.hidden-theme-changer {
+  margin-right: 20px;
+  width: 120px;
+  background-color: transparent;
+  font-size: 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+  left: 590px;
+  border: 3px solid white;
+  border-radius: 10px;
+
+  transition-property: top;
+  transition-delay: 0s;
+  transition-duration: .1s;
+}
+
 .theme-changer:hover {
   position: relative;
   top: -2px;
@@ -56,7 +75,21 @@
   transition-duration: .1s;
 }
 
+.hidden-theme-changer:hover {
+  position: relative;
+  top: -2px;
+  
+  transition-property: top;
+  transition-delay: 0s;
+  transition-duration: .1s;
+}
+
 .theme-changer:active {
+  color: rgb(26, 190, 26);
+  border: 3px solid rgb(26, 190, 26);
+}
+
+.hidden-theme-changer:active {
   color: rgb(26, 190, 26);
   border: 3px solid rgb(26, 190, 26);
 }
@@ -95,11 +128,34 @@
   margin-left: 30px;
 }
 
+.hidden-container-cartTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(10, 118, 79);
+  width: 740px;
+  height: 100%;
+  margin-left: 30px;
+  left: 530px;
+}
+
 .container-cartTitle span {
   z-index: 1;
 }
 
 .container-cartTitle:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 61.5%;
+  width: 39.5%;
+  height: 15px;
+  background: rgb(10, 118, 79);
+  transform: skew(-45deg);
+  z-index: 0;
+}
+
+.hidden-container-cartTitle:after {
   content: '';
   position: absolute;
   top: 15px;
@@ -123,7 +179,26 @@
   z-index: 0;
 }
 
+.hidden-container-cartTitle:before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 61.5%;
+  width: 39.5%;
+  height: 15px;
+  background: rgb(10, 118, 79);
+  transform: skew(45deg);
+  z-index: 0;
+}
+
 .container-cartTitle .cart__title {
+  color: white;
+  font-size: 20px;
+  padding-left: 35px;
+  font-weight: 700;
+}
+
+.hidden-container-cartTitle .cart__title {
   color: white;
   font-size: 20px;
   padding-left: 35px;
@@ -143,6 +218,14 @@
 .items {
   display: flex;
   flex-basis: 70%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.hidden-items {
+  display: flex;
+  flex-basis: 100%;
   flex-wrap: wrap;
   justify-content: center;
   margin: 40px 0;
@@ -226,14 +309,18 @@
 .cart-icon {
   cursor: pointer;
   z-index: 100;
+  position: relative;
+  left: 0px;
 }
 
-.cart-icon-show {
+.hidden-cart-icon {
   cursor: pointer;
   z-index: 100;
+  position: relative;
+  left: 615px;
 }
 
-.cart .cart__items {
+.cart__items {
   height: 500px;
   overflow-y: auto;
 }

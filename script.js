@@ -195,36 +195,29 @@ const switchTheme = () => {
 };
 
 const hideCart = () => {
-  allItems.style.flexBasis = '100%';
-  rightSide.style.flexBasis = '0%';
-  rightSide.style.width = '0%';
+  allItems.className = 'hidden-items';
+  rightSide.className = 'hidden-cart';
+  themeButton.className = 'hidden-theme-changer';
   rightTitle.style.left = '530px';
   rightTitleString.style.color = 'transparent';
-  cartIcon.style.position = 'relative';
-  cartIcon.style.left = '615px';
-  themeButton.style.left = '590px';
 
-  cartIcon.className = 'material-icons cart-icon-show';
+  cartIcon.className = 'material-icons hidden-cart-icon';
 };
 
 const showCart = () => {
-  allItems.style.flexBasis = '70%';
-  rightSide.style.flexBasis = '610px';
-  rightSide.style.width = '100%';
+  allItems.className = 'items';
+  rightSide.className = 'cart';
+  themeButton.className = 'theme-changer';
   rightTitle.style.left = '0px';
   rightTitleString.style.color = 'white';
-  cartIcon.style.position = 'relative';
-  cartIcon.style.left = '0px';
-  themeButton.style.left = '0px';
 
-  console.log('oi');
   cartIcon.className = 'material-icons cart-icon';
 };
 
 const switchCartIcon = () => {
   if (cartIcon.className === 'material-icons cart-icon') {
     hideCart();
-  } else if (cartIcon.className === 'material-icons cart-icon-show') {
+  } else if (cartIcon.className === 'material-icons hidden-cart-icon') {
     showCart();
   }
 };
