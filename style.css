@@ -9,22 +9,24 @@
   user-select: none;
 }
 
-body {
-  background-color: rgb(246, 246, 246);
-}
-
 /* THEMES_____________________________*/
 
 .white-theme {
   background-color: white;
-  color: black;
-  transition: background-color 1s;
+  color: rgb(33, 33, 46);
+
+  transition-property: background-color, color;
+  transition-delay: 0s, .5s;
+  transition-duration: 1s, 1s;
 }
 
 .black-theme {
   background-color: rgb(33, 33, 46);
   color: white;
-  transition: background-color 1s;
+
+  transition-property: background-color, color;
+  transition-delay: 0s, .5s;
+  transition-duration: 1s, 1s;
 }
 
 .theme-changer {
@@ -151,13 +153,32 @@ body {
   border: 2px solid rgb(234, 234, 233);
   border-radius: 5px;
   box-sizing: border-box;
+
+  transition-property: border;
+  transition-delay: 0s;
+  transition-duration: 1s;
 }
 
-.item .item__sku {
+.item-dark {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 5px;
+  width: 200px;
+  border: 2px solid rgb(24, 24, 32);
+  border-radius: 5px;
+  box-sizing: border-box;
+
+  transition-property: border;
+  transition-delay: 0s;
+  transition-duration: 1s;
+}
+
+.item__sku {
   display: none;
 }
 
-.item .item__title {
+.item__title {
   display: flex;
   align-items: center;
   flex-grow: 1;
@@ -166,11 +187,11 @@ body {
   text-align: center;
 }
 
-.item .item__image {
+.item__image {
   width: 100%;
 }
 
-.item .item__add {
+.item__add {
   background-color: rgb(10, 118, 79);
   border: 0;
   cursor: pointer;

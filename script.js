@@ -158,13 +158,25 @@ const black = 'black-theme';
 const white = 'white-theme';
 
 const blackTheme = () => {
+  const itemHolder = document.querySelectorAll('.item');
   themeBody[0].className = black;
   emptyButton.style.color = 'white';
+
+  itemHolder.forEach((item) => {
+    const a = item;
+    a.className = 'item-dark';
+  });
 };
 
 const whiteTheme = () => {
+  const itemHolder = document.querySelectorAll('.item-dark');
   themeBody[0].className = white;
   emptyButton.style.color = 'black';
+
+  itemHolder.forEach((item) => {
+    const a = item;
+    a.className = 'item';
+  });
 };
 
 const switchTheme = () => {
@@ -175,8 +187,6 @@ const switchTheme = () => {
     themeButton.innerHTML = 'Tema Escuro';
     whiteTheme();
   }
-
-  buttonChanger();
 };
 
 emptyCart.addEventListener('click', emptyCartFunction);
