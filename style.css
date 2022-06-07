@@ -1,13 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Lexend+Deca:wght@200;400&display=swap');
+
 * {
   box-sizing: border-box;
-  font-family: Epilogue, sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 body {
   background-color: rgb(246, 246, 246);
 }
+
+/* THEMES_____________________________*/
+
+.white-theme {
+  background-color: white;
+  color: black;
+  transition: background-color 1s;
+}
+
+.black-theme {
+  background-color: rgb(33, 33, 46);
+  color: white;
+  transition: background-color 1s;
+}
+
+.theme-changer {
+  margin-right: 20px;
+  width: 100px;
+  background-color: transparent;
+  font-size: 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/*_____________________________________*/
 
 .header {
   position: relative;
@@ -20,6 +50,8 @@ body {
 
 .container-title {
   width: 80%;
+  display: flex;
+  justify-content:space-between;
 }
 
 .title {
@@ -111,6 +143,7 @@ body {
   align-items: center;
   flex-grow: 1;
   padding: 10px;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -119,7 +152,7 @@ body {
 }
 
 .item .item__add {
-  background-color: rgb(5, 52, 219);
+  background-color: rgb(10, 118, 79);
   border: 0;
   cursor: pointer;
   margin: 0;
@@ -131,7 +164,6 @@ body {
   display: flex;
   flex-basis: 32%;
   flex-flow: column wrap;
-  background-color: rgb(241, 241, 238);
   height: 100vh;
 }
 
@@ -140,10 +172,16 @@ body {
   overflow-y: scroll;
 }
 
+.cart__item {
+  font-weight: 300;
+}
+
 .empty-cart {
   width: 170px;
   height: 35px;
   margin: 0 auto;
-  border: 2px solid rgb(5, 52, 219);
-  background-color: rgb(249, 249, 246);
+  border: 2px solid rgb(6, 80, 53);
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
 }

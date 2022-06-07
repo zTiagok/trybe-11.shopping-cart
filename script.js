@@ -3,6 +3,7 @@ const cartTotalPrice = document.querySelector('.total-price');
 const emptyCart = document.querySelector('.empty-cart');
 const itens = document.querySelector('.items');
 
+
 const emptyCartFunction = () => {
   while (cart.lastChild) {
     cart.lastChild.remove();
@@ -150,6 +151,42 @@ const retrieveCart = () => {
   }
 };
 
-emptyCart.addEventListener('click', emptyCartFunction);
+// THEMES SCRIPT ______________________________________________________________________
+const themeButton = document.querySelector('.theme-changer');
+const themeBody = document.getElementsByTagName('body');
+const emptyButton = document.querySelector('.empty-cart');
+const black = 'black-theme';
+const white = 'white-theme';
 
-window.onload = () => { retrieveProducts(); retrieveCart(); createLoading(); };
+const buttonChanger = () => {
+  if (themeBody[0].className === white) {
+    themeButton.innerHTML = 'Tema Escuro';
+  } else if (themeBody[0].className === black) {
+    themeButton.innerHTML = 'Tema Claro';
+  }
+};
+
+const blackTheme = () => {
+  themeBody[0].className = black;
+  emptyButton.style.color = 'white';
+};
+
+const whiteTheme = () => {
+  themeBody[0].className = white;
+  emptyButton.style.color = 'black';
+};
+
+const switchTheme = () => {
+  if (themeBody[0].className === white) {
+    blackTheme();
+  } else if (themeBody[0].className === black) {
+    whiteTheme();
+  }
+
+  buttonChanger();
+};
+
+emptyCart.addEventListener('click', emptyCartFunction);
+themeButton.addEventListener('click', switchTheme);
+
+window.onload = () => { retrieveProducts(); retrieveCart(); createLoading(); buttonChanger(); };
