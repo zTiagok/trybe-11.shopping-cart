@@ -15,12 +15,25 @@ const createCustomElement = (element, className, innerText) => {
   return e;
 };
 
-const storageCheck = () => {
+const cartCheck = () => {
   if (cart.lastChild) {
     saveCartItems(cart);
   }
 };
 
+const cartValue = () => {
+  const childs = cart.childNodes;
+
+  childs.forEach((child) => {
+    const childString = child.innerHTML;
+    const indexOf$ = childString.indexOf('$');
+    const childValue = childString.slice(indexOf$ + 1);
+
+    console.log(childValue);
+  });
+};
+
+cartValue();
 // FUNÇÃO FINALIZADA!
 const cartItemClickListener = (event) => {
   event.target.remove();
@@ -35,7 +48,7 @@ const createCartItemElement = ({ id: sku, title: name, price: salePrice }) => {
   li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
   li.addEventListener('click', cartItemClickListener);
   ol.appendChild(li);
-  storageCheck();
+  cartCheck();
   return li;
 };
 
