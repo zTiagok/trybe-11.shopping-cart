@@ -1,13 +1,14 @@
 const cart = document.querySelector('.cart__items');
 const cartTotalPrice = document.querySelector('.total-price');
 const emptyCart = document.querySelector('.empty-cart');
+const itens = document.querySelector('.items');
 
 const emptyCartFunction = () => {
-    while (cart.lastChild) {
-      cart.lastChild.remove();
-      cartTotalPrice.innerHTML = '';
-      saveCartItems(cart);
-    }
+  while (cart.lastChild) {
+    cart.lastChild.remove();
+    cartTotalPrice.innerHTML = '';
+    saveCartItems(cart);
+  }
 };
 
 const createProductImageElement = (imageSource) => {
@@ -54,7 +55,20 @@ const cartCheck = () => {
   }
 };
 
-// FUNÇÃO FINALIZADA!
+const removeLoading = () => {
+  const getLoading = document.querySelector('.loading');
+
+  getLoading.remove();
+};
+
+const createLoading = () => {
+  const child = document.createElement('div');
+  child.className = 'loading';
+  child.innerHTML = 'Carregando...';
+
+  itens.appendChild(child);
+};
+
 const cartItemClickListener = (event) => {
   event.target.remove();
   saveCartItems(cart);
@@ -63,7 +77,6 @@ const cartItemClickListener = (event) => {
   if (cartTotalPrice.innerHTML[0] === '0') cartTotalPrice.innerHTML = '';
 };
 
-// FUNÇÃO FINALIZADA!
 const createCartItemElement = ({ id: sku, title: name, price: salePrice }) => {
   const li = document.createElement('li');
   const ol = document.querySelector('.cart__items');
@@ -98,7 +111,6 @@ const addListenerToButton = () => {
   });
 };
 
-// FUNÇÃO FINALIZADA!
 const createProductItemElement = ({ id: sku, title: name, thumbnail: image }) => {
   const section = document.createElement('section');
   const parent = document.querySelector('.items');
@@ -113,11 +125,11 @@ const createProductItemElement = ({ id: sku, title: name, thumbnail: image }) =>
   parent.appendChild(section);
 };
 
-// FUNÇÃO FINALIZADA!
 const retrieveProducts = async () => {
   const response = fetchProducts('computador');
   const data = await response;
   
+  removeLoading();
   data.results.forEach((result) => {
     createProductItemElement(result);
   });
@@ -140,4 +152,4 @@ const retrieveCart = () => {
 
 emptyCart.addEventListener('click', emptyCartFunction);
 
-window.onload = () => { retrieveProducts(); retrieveCart(); };
+window.onload = () => { retrieveProducts(); retrieveCart(); createLoading(); };
