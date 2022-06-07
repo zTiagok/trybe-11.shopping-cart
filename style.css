@@ -31,7 +31,7 @@
 
 .theme-changer {
   margin-right: 20px;
-  width: 100px;
+  width: 120px;
   background-color: transparent;
   font-size: 15px;
   color: white;
@@ -39,6 +39,8 @@
   cursor: pointer;
   position: relative;
   top: 0px;
+  border: 3px solid white;
+  border-radius: 10px;
 
   transition-property: top;
   transition-delay: 0s;
@@ -56,6 +58,7 @@
 
 .theme-changer:active {
   color: rgb(26, 190, 26);
+  border: 3px solid rgb(26, 190, 26);
 }
 
 /*_____________________________________*/
@@ -81,12 +84,13 @@
   padding-left: 30px;
 }
 
+/* AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI  */
 .container-cartTitle {
   position: relative;
   display: flex;
   align-items: center;
   background-color: rgb(10, 118, 79);
-  width: 40%;
+  width: 740px;
   height: 100%;
   margin-left: 30px;
 }
@@ -150,7 +154,7 @@
   height: auto;
   margin: 5px;
   width: 200px;
-  border: 2px solid rgb(234, 234, 233);
+  border: 2px solid rgb(214, 214, 214);
   border-radius: 5px;
   box-sizing: border-box;
 
@@ -200,16 +204,38 @@
   color: white;
 }
 
+/* AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI  */
 .cart {
   display: flex;
-  flex-basis: 32%;
+  flex-basis: 610px;
+  justify-self: end;
   flex-flow: column wrap;
   height: 100vh;
+  width: 100%;
+}
+
+.hidden-cart {
+  display: flex;
+  flex-basis: 0%;
+  justify-self: end;
+  flex-flow: column wrap;
+  height: 100vh;
+  width: 0%;
+}
+
+.cart-icon {
+  cursor: pointer;
+  z-index: 100;
+}
+
+.cart-icon-show {
+  cursor: pointer;
+  z-index: 100;
 }
 
 .cart .cart__items {
   height: 500px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .cart__item {
@@ -225,4 +251,5 @@
   background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
+  position: relative;
 }
