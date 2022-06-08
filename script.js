@@ -199,7 +199,11 @@ const hideCart = () => {
   rightSide.className = 'hidden-cart';
   themeButton.className = 'hidden-theme-changer';
   rightTitle.style.left = '530px';
+  rightTitle.style.transition = '1s';
+  rightTitle.style.transitionDelay = '0s';
   rightTitleString.style.color = 'transparent';
+  rightTitleString.style.transition = '.5s';
+  rightTitleString.style.transitionDelay = '0s';
 
   cartIcon.className = 'material-icons hidden-cart-icon';
 };
@@ -209,7 +213,11 @@ const showCart = () => {
   rightSide.className = 'cart';
   themeButton.className = 'theme-changer';
   rightTitle.style.left = '0px';
+  rightTitle.style.transition = '1s';
+  rightTitle.style.transitionDelay = '.2s';
   rightTitleString.style.color = 'white';
+  rightTitleString.style.transition = '1s';
+  rightTitleString.style.transitionDelay = '1s';
 
   cartIcon.className = 'material-icons cart-icon';
 };
