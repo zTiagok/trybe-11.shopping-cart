@@ -230,8 +230,20 @@ const switchCartIcon = () => {
   }
 };
 
+// TO-DO -------------------------------------------
+// HOVER NO PRODUTO GERA ANIMAÇÃO
+// SHOW/HIDE CART GERA ANIMAÇÃO NO FLEX DOS PRODUTOS
+// MELHORAR O CART
+// ADICIONAR DESCRIÇÃO MELHOR PARA O VALOR TOTAL
+// MOSTRAR VALORES DIRETAMENTE NOS PRODUTOS
+// -------------------------------------------------
+
 cartIcon.addEventListener('click', switchCartIcon);
 emptyCart.addEventListener('click', emptyCartFunction);
 themeButton.addEventListener('click', switchTheme);
 
-window.onload = () => { retrieveProducts(); retrieveCart(); createLoading(); };
+window.onload = () => { 
+  retrieveProducts(); retrieveCart(); createLoading(); 
+
+  rightTitle.style.left = '0px';
+};

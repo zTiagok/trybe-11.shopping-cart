@@ -285,22 +285,22 @@
   height: 100vh;
   width: 100%;
 
-  transition-property: flex-basis;
-  transition-duration: 1s;
-  transition-delay: 0s;
+  transition-property: flex-basis, width;
+  transition-duration: 1s, .1s;
+  transition-delay: 0s, 0s;
 }
 
 .hidden-cart {
   display: flex;
-  flex-basis: 0%;
+  flex-basis: 0px;
   justify-self: end;
   flex-flow: column wrap;
   height: 100vh;
   width: 0%;
 
-  transition-property: flex-basis;
-  transition-duration: 1s;
-  transition-delay: 0s;
+  transition-property: flex-basis, width;
+  transition-duration: 1s, .1s;
+  transition-delay: 0s, 0s;
 }
 
 .cart-icon {
