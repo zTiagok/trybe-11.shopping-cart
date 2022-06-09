@@ -30,7 +30,7 @@ const retrieveValue = async (values) => {
   const valueResult = values
   .reduce((previousValue, currentValue) => parseFloat(previousValue) + parseFloat(currentValue), 0);
 
-  cartTotalPrice.innerHTML = valueResult;
+  cartTotalPrice.innerHTML = `Total: R$ ${valueResult.toFixed(2)}`;
 };
 
 const retrieveNumbers = async () => {
@@ -81,7 +81,10 @@ const createCartItemElement = ({ id: sku, title: name, price: salePrice }) => {
   const li = document.createElement('li');
   const ol = document.querySelector('.cart__items');
   li.className = 'cart__item';
-  li.innerText = `SKU: ${sku} | NAME: ${name} | PRICE: $${salePrice}`;
+  li.innerText = `${name.toUpperCase()}
+  ${sku}
+
+  R$ ${salePrice.toFixed(2)}`;
   li.addEventListener('click', cartItemClickListener);
   ol.appendChild(li);
   cartCheck();

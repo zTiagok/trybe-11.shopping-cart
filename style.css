@@ -21,7 +21,7 @@
 }
 
 .black-theme {
-  background-color: rgb(33, 33, 46);
+  background-color: rgb(29, 29, 34);
   color: white;
 
   transition-property: background-color, color;
@@ -104,7 +104,6 @@
   padding-left: 30px;
 }
 
-/* AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI  */
 .container-cartTitle {
   position: relative;
   display: flex;
@@ -241,7 +240,7 @@
   height: auto;
   margin: 5px;
   width: 200px;
-  border: 2px solid rgb(24, 24, 32);
+  border: 2px solid rgb(10, 10, 12);
   border-radius: 5px;
   box-sizing: border-box;
 
@@ -276,7 +275,6 @@
   color: white;
 }
 
-/* AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI AQUI  */
 .cart {
   display: flex;
   flex-basis: 610px;
@@ -331,9 +329,16 @@
   overflow-y: auto;
 }
 
+.cart-line {
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(2, 114, 2, 0), rgba(0, 167, 0, 0.87) , rgba(2, 114, 2, 0))
+}
+
 .cart__item {
-  font-weight: 300;
-  margin-top: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: rgba(2, 114, 2, 0.479)
 }
 
 .empty-cart {
@@ -345,4 +350,9 @@
   border-radius: 5px;
   cursor: pointer;
   position: relative;
+}
+
+.total-price {
+  text-align: center;
+  padding: 15px 7px 7px;
 }
