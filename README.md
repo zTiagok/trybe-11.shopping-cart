@@ -54,11 +54,19 @@
   <br>
   <hr>
   <h3>
-    📄 Pages and Components 📄
+   📄 Features 📄
   </h3>
   <br>
-  <span> - </span>
-  <br>
+  <span> ◐ Consume a product listing from the Mercado Livre API. ◑ </span>
+  <br><br>
+  <span> ◐ Add products to the shopping cart. ◑ </span>
+  <br><br>
+  <span> ◐ Remove items from the shopping cart when you click on them. ◑ </span>
+  <br><br>
+  <span> ◐ Clear the shopping cart using a dedicated button. ◑ </span>
+  <br><br>
+  <span> ◐ Sum of the items' values are calculated in the shopping cart. ◑ </span>
+  <br><br>
   <hr>
   <h3>
     📦 Frameworks and Libraries 📦
