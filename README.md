@@ -1,9 +1,9 @@
 <div align="center">
   <h3>
-    Check out this project <a href="-"> website</a>! 
+    I'm working on this project <a href="-"> website</a>! 
   <h3>
   <h2>
-    -
+    Shopping Cart
     <br><br>
   </h2>
 
@@ -39,18 +39,17 @@
   <div align="left">
   <br>
   
-- [X] 1. 
-- [X] 2. 
-- [X] 3. 
-- [X] 4. 
-- [X] 5. 
-- [X] 6. 
-- [X] 7. 
-- [X] 8.
-- [X] 9. 
-- [X] 10. 
-- [X] 11. 
-- [X] 12. 
+- [X] 1. Develop tests to achieve 25% total coverage and 100% of the `fetchProducts` function.
+- [X] 2. Create a product listing.
+- [X] 3. Develop tests to achieve 50% full coverage and 100% of the `fetchItem` function.
+- [X] 4. Add products to the shopping cart.
+- [X] 5. Remove the item from the shopping cart when you click on it.
+- [X] 6. Develop tests to reach 75% total coverage and 100% of the `saveCartItems` function.
+- [X] 7. Develop tests to achieve 100% total coverage and 100% of the `getSavedCartItems` function.
+- [X] 8. Load the shopping cart via LocalStorage on page start.
+- [X] 9. Calculate the total value of the shopping cart items asynchronously.
+- [X] 10. Implement logic in the Empty Cart button to clear the shopping cart.
+- [X] 11. Add a loading text during a request to the API.
   </div>
   <br>
   <hr>
