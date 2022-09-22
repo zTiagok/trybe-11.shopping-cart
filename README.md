@@ -18,19 +18,21 @@
   <br>
   <hr>
   <h3>
-    🚨 Warning 🚨
+     🚨 Warning 🚨
   </h3>
   <br>
-  <span> The test files were provided by Trybe to evaluate the project. </span>
+  <span> Some Javascript and test files were provided by Trybe to evaluate the project. </span>
+  <br><br>
+  <b> The tests in the "/tests" folder were all made by me! </b>
   <br>
   <hr>
   <h3>
     ℹ️ Information ℹ️
   </h3>
   <br>
-  <span> - </span> 
+  <span> My first e-commerce, made with a simple HTML, Javascript and CSS. Using Mercado Livre's API, browse through the products and add them to your shopping cart! </span> 
   <br><br>
-  <span> - </span>
+  <span> You can also remove items and even minimize the shopping cart by clicking on the top right icon. </span>
   <br>
   <hr>
   <h3>
