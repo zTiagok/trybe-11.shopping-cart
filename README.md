@@ -1,6 +1,6 @@
 <div align="center">
   <h3>
-    I'm working on this project <a href="-"> website</a>! 
+    Check out this project <a href="https://ztiagok.github.io/trybe-11.shopping-cart/"> website</a>! 
   <h3>
   <h2>
     Shopping Cart
